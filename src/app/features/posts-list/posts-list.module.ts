@@ -1,8 +1,7 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
-import { PostsListRoutingModule } from './posts-list-routing.module';
+import { NgModule } from '@angular/core';
 import { PostsListComponent } from './components/posts-list/posts-list.component';
+import { PostsListRoutingModule } from './posts-list-routing.module';
 
 
 @NgModule({

@@ -2,8 +2,11 @@
     <div class="row mt-5">
         <div class="col-12 col-md-3" *ngFor="let post of dataPosts">
             <div>
-                <img class="w-100" src="https://i.ytimg.com/vi/MJuobTyGh8g/maxresdefault.jpg" alt="example-pic">
-                <h3 class="mt-2">{{ post.title | capitalizeFirst }}</h3>
+                <a class="cursor-pointer" (click)="checkPost(post.id)">
+                    <img class="w-100" src="https://i.ytimg.com/vi/MJuobTyGh8g/maxresdefault.jpg" alt="example-pic">
+
+                    <h3 class="mt-2">{{ post.title | capitalizeFirst }}</h3>
+                </a>
                 <p>{{ post.body | capitalizeFirst }}</p>
             </div>
         </div>

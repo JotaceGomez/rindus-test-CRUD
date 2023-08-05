@@ -12,7 +12,6 @@ const routes: Routes = [
   {
     path: 'blogs',
     canActivate: [],
-    component: PostsListComponent,
     loadChildren: () =>
       import('./features/posts-list/posts-list.module').then(
         (m) => m.PostsListModule

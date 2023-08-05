@@ -1,1 +1,13 @@
-<p>posts-detail works!</p>
+<section class="container pt-4" *ngIf="post">
+    <section class="px-3 px-md-0 mb-5">
+        <img class="w-100"
+            src="https://img.freepik.com/foto-gratis/habitacion-vacia-sillas-escritorios_23-2149008873.jpg"
+            alt="chair-office">
+        <h1 class="w-100 text-center color-rindus mt-5">{{post.title | capitalizeFirst}}</h1>
+        <p class="mt-4">{{post.body | capitalizeFirst}}</p>
+    </section>
+
+    <section>
+        <app-comments></app-comments>
+    </section>
+</section>

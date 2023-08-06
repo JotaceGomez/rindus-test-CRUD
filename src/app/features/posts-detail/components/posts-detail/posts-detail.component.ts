@@ -22,6 +22,10 @@ export class PostsDetailComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.getPost();
+  }
+
+  private getPost(): void {
     this.postDetailService.getPost(this.id).subscribe(res => {
       this.post = res;
     });

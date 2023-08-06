@@ -1,1 +1,14 @@
-<p>comments works!</p>
+<section>
+    <h4 class="color-rindus fw-bold text-center mb-4">{{ commentString }}</h4>
+    <div class="row mb-2" *ngFor="let comment of comments">
+        <div class="col-12">
+            <span class="fw-bold color-rindus">{{comment.name}}</span>
+        </div>
+        <div class="col-12">
+            <span class="fw-bold">{{comment.email}}</span>
+        </div>
+        <div class="col-12">
+            <p>{{comment.body}}</p>
+        </div>
+    </div>
+</section>

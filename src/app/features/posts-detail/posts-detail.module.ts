@@ -10,7 +10,6 @@ import { CustomPipesModule } from 'src/app/core/custom-pipes/custom-pipes.module
   declarations: [
     PostsDetailComponent,
     CommentsComponent,
-
   ],
   imports: [
     CommonModule,

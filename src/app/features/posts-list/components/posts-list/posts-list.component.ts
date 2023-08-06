@@ -17,12 +17,16 @@ export class PostsListComponent implements OnInit {
     private router: Router) { }
 
   ngOnInit(): void {
-    this.postsListService.getPosts().subscribe(res => {
-      this.dataPosts = res;
-    })
+    this.getPosts();
   }
 
   checkPost(id: number): void {
     this.router.navigateByUrl(`/posts/${id}`);
+  }
+
+  private getPosts(): void {
+    this.postsListService.getPosts().subscribe(res => {
+      this.dataPosts = res;
+    })
   }
 }

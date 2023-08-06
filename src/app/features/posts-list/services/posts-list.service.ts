@@ -14,4 +14,5 @@ export class PostsListService {
   getPosts(): Observable<Array<PostItem>> {
     return this.http.get<Array<PostItem>>(POSTS_URL);
   }
+  
 }

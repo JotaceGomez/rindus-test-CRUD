@@ -1,13 +1,17 @@
 <section class="container">
+    <div class="mt-5 d-flex justify-content-end">
+        <button class="btn btn-success" (click)="openModal()">create post</button>
+    </div>
     <div class="row mt-5">
         <div class="col-12 col-md-3" *ngFor="let post of dataPosts">
             <div>
-                <a class="cursor-pointer" (click)="checkPost(post.id)">
+                <a class="cursor-pointer text-decoration-none" (click)="checkPost(post.id!)">
                     <img class="w-100" src="https://i.ytimg.com/vi/MJuobTyGh8g/maxresdefault.jpg" alt="example-pic">
 
-                    <h3 class="mt-2">{{ post.title | capitalizeFirst }}</h3>
+                    <h3 class="mt-2 color-rindus">{{ post.title | capitalizeFirst }}</h3>
                 </a>
                 <p>{{ post.body | capitalizeFirst }}</p>
+                <button class="btn btn-outline-success" (click)="openModal(post.id)">open modal</button>
             </div>
         </div>
     </div>

@@ -2,17 +2,17 @@ import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { PostsListComponent } from './components/posts-list/posts-list.component';
 import { PostsListRoutingModule } from './posts-list-routing.module';
-import { CapitalizeFirstPipe } from 'src/app/core/custom-pipes/capitalize-first.pipe';
-
+import { CustomPipesModule } from 'src/app/core/custom-pipes/custom-pipes.module';
 
 @NgModule({
   declarations: [
     PostsListComponent,
-    CapitalizeFirstPipe
+
   ],
   imports: [
     CommonModule,
-    PostsListRoutingModule,    
+    PostsListRoutingModule,
+    CustomPipesModule
   ]
 })
 export class PostsListModule { }

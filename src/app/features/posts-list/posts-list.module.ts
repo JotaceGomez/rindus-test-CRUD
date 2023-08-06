@@ -5,12 +5,14 @@ import { PostsListRoutingModule } from './posts-list-routing.module';
 import { CustomPipesModule } from 'src/app/core/custom-pipes/custom-pipes.module';
 import { ModalComponent } from './components/modal/modal.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { DeleteModalComponent } from './components/delete-modal/delete-modal.component';
 
 
 @NgModule({
   declarations: [
     PostsListComponent,
     ModalComponent,
+    DeleteModalComponent,
 
   ],
   imports: [

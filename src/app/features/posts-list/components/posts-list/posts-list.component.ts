@@ -4,8 +4,7 @@ import { PostItem } from '../../models/post-item.model';
 import { Router } from '@angular/router';
 import { NgbModal, NgbModalOptions } from '@ng-bootstrap/ng-bootstrap';
 import { ModalComponent } from '../modal/modal.component';
-
-
+import { DeleteModalComponent } from '../delete-modal/delete-modal.component';
 
 @Component({
   selector: 'app-posts-list',
@@ -38,6 +37,17 @@ export class PostsListComponent implements OnInit {
     const modalRef = this.modalService.open(ModalComponent, options);
     modalRef.componentInstance.id = id;
   }
+
+  openModalDelete(id: number, title: string) {
+    const options: NgbModalOptions = {
+      size: 'lg',
+      centered: true
+    };
+    const modalRef = this.modalService.open(DeleteModalComponent, options);
+    modalRef.componentInstance.id = id;
+    modalRef.componentInstance.postTitle = title;
+  }
+
 
 
   private getPosts(): void {

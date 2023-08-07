@@ -8,19 +8,21 @@ import { PageNotFoundComponent } from './core/components/page-not-found/page-not
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { CustomPipesModule } from './core/custom-pipes/custom-pipes.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     RouterModule,
-    NgbModule
+    NgbModule,
+    CustomPipesModule
   ],
   providers: [],
   bootstrap: [AppComponent]

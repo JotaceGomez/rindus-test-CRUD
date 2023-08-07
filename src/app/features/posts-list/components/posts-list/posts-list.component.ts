@@ -14,6 +14,7 @@ import { DeleteModalComponent } from '../delete-modal/delete-modal.component';
 export class PostsListComponent implements OnInit {
 
   dataPosts: Array<PostItem> = [];
+  searchTerm: string = '';
 
   constructor(
     private postsListService: PostsListService,

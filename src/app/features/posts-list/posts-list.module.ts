@@ -7,13 +7,11 @@ import { ModalComponent } from './components/modal/modal.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DeleteModalComponent } from './components/delete-modal/delete-modal.component';
 
-
 @NgModule({
   declarations: [
     PostsListComponent,
     ModalComponent,
-    DeleteModalComponent,
-
+    DeleteModalComponent
   ],
   imports: [
     CommonModule,

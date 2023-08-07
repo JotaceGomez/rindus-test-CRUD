@@ -15,6 +15,7 @@ It's a simple CRUD (without validators or interceptors) application that utilize
 2. Run "npm i"
 3. Run "ng serve"
 4. Open your web browser and navigate to 'http://localhost:4200/'
+5. Play it with the browser's console open to observe errors and successes in the CRUD petitions.
 
 
 ## Development server

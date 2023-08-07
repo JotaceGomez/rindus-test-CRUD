@@ -23,11 +23,11 @@ export class DeleteModalComponent implements OnInit {
     if (this.id) {
       this.postDetailService.deletePost(this.id).subscribe(
         () => {
-          console.log('Correcto - Post eliminado exitosamente');
+          console.log('Post deleted successfully');
           this.activeModal.close();
         },
         (error) => {
-          console.error('Error al eliminar el post:', error);
+          console.error('Error:', error);
         }
       );
     }

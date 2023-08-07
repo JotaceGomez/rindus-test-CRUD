@@ -23,8 +23,7 @@ export class CommentsComponent implements OnInit {
 
   private getComments(): void {
     this.postDetailService.getComments(this.id).subscribe(res => {
-      this.comments = res;
-      console.log(this.comments);
+      this.comments = res;      
     });
   }
 }

@@ -15,6 +15,7 @@ export class PostsListComponent implements OnInit {
 
   dataPosts: Array<PostItem> = [];
   searchTerm: string = '';
+  sortOrder: 'asc' | 'desc' = 'asc';
 
   constructor(
     private postsListService: PostsListService,
@@ -49,7 +50,23 @@ export class PostsListComponent implements OnInit {
     modalRef.componentInstance.postTitle = title;
   }
 
+  toggleSortOrder(): void {
+    this.sortOrder = this.sortOrder === 'asc' ? 'desc' : 'asc';
+    this.sortPostsByTitle();
+  }
 
+  sortPostsByTitle(): void {
+    this.dataPosts.sort((a, b) => {
+      const titleA = a.title.toLowerCase();
+      const titleB = b.title.toLowerCase();
+
+      if (this.sortOrder === 'asc') {
+        return titleA.localeCompare(titleB);
+      } else {
+        return titleB.localeCompare(titleA);
+      }
+    });
+  }
 
   private getPosts(): void {
     this.postsListService.getPosts().subscribe(res => {

@@ -18,7 +18,7 @@ import { DeleteModalComponent } from './components/delete-modal/delete-modal.com
     PostsListRoutingModule,
     CustomPipesModule,
     FormsModule,
-    ReactiveFormsModule 
+    ReactiveFormsModule
   ]
 })
 export class PostsListModule { }

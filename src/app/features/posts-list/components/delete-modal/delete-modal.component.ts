@@ -11,13 +11,12 @@ export class DeleteModalComponent implements OnInit {
   @Input() id?: number;
   @Input() postTitle?: string;
 
-  constructor(public activeModal: NgbActiveModal,
+  constructor(
+    public activeModal: NgbActiveModal,
     private postDetailService: PostsDetailService
   ) { }
 
-  ngOnInit(): void {
-
-  }
+  ngOnInit(): void { }
 
   onDelete(): void {
     if (this.id) {
@@ -32,5 +31,4 @@ export class DeleteModalComponent implements OnInit {
       );
     }
   }
-
 }

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { PostsDetailService } from '../../services/posts-detail.service';
-import { PostItem } from 'src/app/features/posts-list/models/post-item.model';
 import { ActivatedRoute } from '@angular/router';
+import { PostItem } from 'src/app/features/posts-list/models/post-item.model';
+import { PostsDetailService } from '../../services/posts-detail.service';
 
 @Component({
   selector: 'app-posts-detail',
